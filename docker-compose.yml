@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  starticket-front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: starticket-front-container
+    ports:
+      - "5173:80"
+    restart: unless-stopped
